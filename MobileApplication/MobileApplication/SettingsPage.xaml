@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.SettingsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="25">
+            <Grid Grid.Row="1">
+                <Button x:Name="BackToMainBtn" Text="Главная" FontAttributes="Bold"
+                        Grid.Row="0" Grid.Column="0" FontSize="13" Margin="0, 0, 0, 20"
+                        TextColor="White" BackgroundColor="#E57C23"
+                        CornerRadius="40" HorizontalOptions="StartAndExpand" Clicked="BackToMainBtn_Clicked">
+                </Button>
+            </Grid>
+            <Grid Grid.Row="2" ColumnSpacing="5">
+                <Label Text="Имя пользователя: " TextColor="Black" Grid.Row="0" Grid.Column="0"
+                       FontAttributes="Bold" FontSize="17" HorizontalOptions="StartAndExpand">
+                </Label>
+                <Label x:Name="UsernameField" Grid.Row="0" Grid.Column="1"
+                       Text="" TextColor="Black" FontAttributes="Bold"
+                               FontSize="16" HorizontalOptions="StartAndExpand">
+                </Label>
+            </Grid>
+            <Grid Grid.Row="3" Margin="0, 130, 0, 0">
+                <Label Text="Управление аккаунтом" TextColor="Black" Margin="0, 0, 0, 20" FontAttributes="Bold"
+                       FontSize="21" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                </Label>
+                <Button x:Name="ExitFromAccountBtn" Grid.Row="1" Grid.ColumnSpan="2"
+                    Text="Выйти из аккаунта"
+                    TextColor="#025464"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    BorderColor="#025464"
+                    BorderWidth="1.5"
+                    CornerRadius="50" Margin="0, 0, 0, 20"
+                    Clicked="ExitFromAccountBtn_Clicked" />
+
+                <Button x:Name="DeleteAccountBtn" Grid.Row="2" Grid.ColumnSpan="2"
+                    Text="Удалить аккаунт"
+                    TextColor="#DF2E38"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    BorderColor="#DF2E38"
+                    BorderWidth="1.5"
+                    CornerRadius="50" Margin="0, 0, 0, 20"
+                    Clicked="DeleteAccountBtn_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

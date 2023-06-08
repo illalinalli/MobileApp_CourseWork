@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.UpdateDetailsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30">
+                <Grid Grid.Row="1" RowSpacing="30" ColumnSpacing="7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="ToMineDetailsBtn" Text="Назад" FontAttributes="Bold"
+                        Grid.Row="0" Grid.Column="0" FontSize="12" 
+                        TextColor="White" BackgroundColor="#025464"
+                        CornerRadius="40" HorizontalOptions="StartAndExpand" Clicked="ToMineDetailsBtn_Clicked">
+                    </Button>
+                    <Label x:Name="MineDetails" Grid.Row="0" Grid.Column="1"
+                           Text="Изменить количество деталей" HorizontalOptions="CenterAndExpand"
+                       TextColor="#025464" FontSize="15" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+                <Grid Grid.Row="3" RowSpacing="10" ColumnSpacing="7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="40"/>
+
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="40"/>
+
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="40"/>
+
+                        <RowDefinition Height="140"/>
+                        <RowDefinition Height="40"/>
+
+                        <RowDefinition Height="50"/>
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="170" />
+
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Row="0" Grid.Column="0" 
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="doubleSq.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+
+                        <Entry x:Name="ChangeDoubleSquare" Grid.Row="1" Grid.Column="0"
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+
+                        <Frame Grid.Row="0" Grid.Column="1" 
+                       HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="trapezium.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="TrapeziumCount" Grid.Row="1" Grid.Column="1"
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+                        
+                        <Frame Grid.Row="2" Grid.Column="0"
+                       HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="hexagon.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="HexagonCount" Grid.Row="3" Grid.Column="0"
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+
+
+                        <Frame Grid.Row="2" Grid.Column="1"
+                       HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="pentagon.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="PentagonCount" Grid.Row="3" Grid.Column="1"
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+
+                        <Frame Grid.Row="4" Grid.Column="0"
+                       HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="eqTr.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="EqualTriangleCount" Grid.Row="5" Grid.Column="0"
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+
+
+                        <Frame Grid.Row="4" Grid.Column="1"
+                       HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="parallelogram.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+                        
+                        <Entry x:Name="ParallelogramCount" Grid.Row="5" Grid.Column="1"
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+
+
+                        <Frame Grid.Row="6" Grid.Column="0"
+                        HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="square.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="SquareCount" Grid.Row="7" Grid.Column="0"
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+
+
+                        <Frame Grid.Row="6" Grid.Column="1"
+                       HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                            <Image Source="isoscaleTr.png" Aspect="AspectFill">
+                            </Image>
+                        </Frame>
+                        <Entry x:Name="IsoscelesTriangleCount" Grid.Row="7" Grid.Column="1" 
+                               Placeholder="" TextColor="Black" PlaceholderColor="Gray" FontSize="20"
+                               >
+                        </Entry>
+
+                    <Button x:Name="SaveChangesBtn" Text="Сохранить"
+                            FontAttributes="Bold"
+                            Grid.Row="8" Grid.ColumnSpan="2" FontSize="14"
+                            TextColor="White" BackgroundColor="#E57C23"
+                            CornerRadius="40" HorizontalOptions="CenterAndExpand"
+                            Clicked="SaveChangesBtn_Clicked">
+                        </Button>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

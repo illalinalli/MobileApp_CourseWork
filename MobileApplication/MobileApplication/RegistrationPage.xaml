@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.RegistrationPage">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center">
+            <Entry x:Name="UsernameFieldReg" Placeholder="Введите ваше имя" TextColor="Black" PlaceholderColor="Gray"/>
+            <Entry x:Name="LoginFieldReg" Placeholder="Введите логин" TextColor="Black" PlaceholderColor="Gray"/>
+            <Entry x:Name="PasswordFieldReg" IsPassword="True" Placeholder="Введите пароль" TextColor="Black" PlaceholderColor="Gray"/>
+            <Grid Grid.Row="1" RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto">
+                <Button x:Name="NavigateToAuthorizationBtn" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand"
+                    Text="Назад"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#9BA4B5"
+                    CornerRadius="50"
+                    Clicked="NavigateToAuthorizationBtn_Clicked">
+                </Button>
+                <Button x:Name="NextToDetailsBtn" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand"
+                    Text="Далее"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#025464"
+                    CornerRadius="50"
+                    Clicked="NextToDetailsBtn_Clicked">
+                </Button>
+               
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

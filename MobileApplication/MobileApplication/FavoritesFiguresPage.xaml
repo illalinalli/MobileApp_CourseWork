@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.FavoritesFiguresPage">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Grid Grid.Row="1">
+                
+                <Label Text="Избранное" TextColor="#025464" FontSize="20" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                <Button x:Name="BackToMainBtn" Text="Главная" FontAttributes="Bold"
+                        Grid.Row="0" Grid.Column="0" FontSize="13"
+                        TextColor="White" BackgroundColor="#E57C23"
+                        CornerRadius="40" HorizontalOptions="StartAndExpand" Clicked="BackToMainBtn_Clicked">
+                </Button>
+            </Grid>
+            
+            <ListView Grid.Row="2" x:Name="UserFavFigures" HasUnevenRows="True" Footer="">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding SourceToPic}" WidthRequest="110" HeightRequest="125"
+                                       HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    

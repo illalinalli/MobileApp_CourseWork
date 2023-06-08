@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.MineDetailsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Grid Grid.Row="1">
+                    <Button x:Name="BackToMainBtn" Text="Главная" FontAttributes="Bold"
+                        Grid.Row="0" Grid.Column="0" FontSize="13"
+                        TextColor="White" BackgroundColor="#E57C23"
+                        CornerRadius="40" HorizontalOptions="StartAndExpand" Clicked="BackToMainBtn_Clicked">
+                    </Button>
+                </Grid>
+                <Label x:Name="MineDetails" Text="Мои детали"
+                       TextColor="#025464" FontSize="20" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                <Grid Grid.Row="2">
+                    <Button x:Name="ChangeCountBtn" Text="Изменить" Grid.Row="0" Grid.Column="1"
+                        FontAttributes="Bold" FontSize="13"
+                        TextColor="#025464" BackgroundColor="Transparent" BorderColor="#025464" BorderWidth="1.3"
+                        CornerRadius="50" HorizontalOptions="EndAndExpand" Clicked="ChangeCountBtn_Clicked">
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="3" RowSpacing="5" ColumnSpacing="7" Grid.ColumnSpan="2" Grid.RowSpan="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="30"/>
+                        
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="30"/>
+                        
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="30"/>
+
+                        <RowDefinition Height="140"/>
+                        <RowDefinition Height="30"/>
+
+                        <RowDefinition Height="130"/>
+                        <RowDefinition Height="30"/>
+
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="30"/>
+
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="30"/>
+
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="170" />
+
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Row="0" Grid.Column="0" 
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="doubleSq.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+
+                    <Label x:Name="DoubleSquareCount" Grid.Row="1" Grid.Column="0"
+                           Text="{Binding DoubleSqCount}" TextColor="Black"
+                           FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <Frame Grid.Row="0" Grid.Column="1"
+                       HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="trapezium.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Label x:Name="TrapeziumCount" Grid.Row="1" Grid.Column="1" 
+                           Text="4 шт." TextColor="Black" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+
+                    <Frame Grid.Row="2" Grid.Column="0"
+                       HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="hexagon.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Label x:Name="HexagonCount" Grid.Row="3" Grid.Column="0"
+                           Text="1 шт." TextColor="Black"
+                           FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <Frame Grid.Row="2" Grid.Column="1"
+                       HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="pentagon.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Label x:Name="PentagonCount" Grid.Row="3" Grid.Column="1" 
+                           Text="2 шт." TextColor="Black"
+                           FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <Frame Grid.Row="4" Grid.Column="0"
+                        HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="eqTr.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Label x:Name="EqualTriangleCount" Grid.Row="5" Grid.Column="0" 
+                           Text="2 шт." TextColor="Black"
+                           FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <Frame Grid.Row="4" Grid.Column="1"
+                        HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="parallelogram.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Label x:Name="ParallelogramCount" Grid.Row="5" Grid.Column="1" 
+                           Text="2 шт." TextColor="Black"
+                           FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    
+                    <Frame Grid.Row="6" Grid.Column="0"
+                        HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="square.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Label x:Name="SquareCount" Grid.Row="7" Grid.Column="0" 
+                           Text="2 шт." TextColor="Black"
+                           FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                    <Frame Grid.Row="6" Grid.Column="1"
+                        HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="isoscaleTr.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Label x:Name="IsoscelesTriangleCount" Grid.Row="7" Grid.Column="1" 
+                           Text="2 шт." TextColor="Black"
+                           FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+      
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

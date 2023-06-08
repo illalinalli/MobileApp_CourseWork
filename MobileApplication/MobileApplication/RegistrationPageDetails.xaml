@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.RegistrationPageDetails">
+    <ContentPage.Content>
+        <StackLayout Padding="40">
+            <Label Text="Введите количество имеющихся у вас деталей" 
+                   TextColor="Black" FontSize="20" FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"/>
+                <Entry x:Name="SquareFieldReg" Placeholder="Квадраты" TextColor="Black" 
+                       PlaceholderColor="Gray" />
+                <Entry x:Name="EqualTriangleFieldReg" Placeholder="Равносторонние треугольники"
+                       TextColor="Black" PlaceholderColor="Gray" />
+                <Entry x:Name="ParallelogramFieldReg" Placeholder="Параллелограмм" 
+                       TextColor="Black" PlaceholderColor="Gray" />
+                <Entry x:Name="TrapeziumFieldReg" Placeholder="Трапеции" 
+                       TextColor="Black" PlaceholderColor="Gray"/>
+                <Entry x:Name="RentagonFieldReg" Placeholder="Пятиугольники" 
+                       TextColor="Black" PlaceholderColor="Gray" />
+                <Entry x:Name="IsoscelesTriangleFieldReg" Placeholder="Равносторонние треугольники" 
+                       TextColor="Black" PlaceholderColor="Gray" />
+                <Entry x:Name="HexagonFieldReg" Placeholder="Шестиугольники" 
+                       TextColor="Black" PlaceholderColor="Gray" />
+                <Entry x:Name="DoubleSquareFieldReg" Placeholder="Двойные квадраты" 
+                       TextColor="Black" PlaceholderColor="Gray"/>
+            <Button x:Name="NavigateToMainBtn" Text="Далее"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#E57C23"
+                    CornerRadius="50"
+                    Clicked="NavigateToMainBtn_Clicked">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

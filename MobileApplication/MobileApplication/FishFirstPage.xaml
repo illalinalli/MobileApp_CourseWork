@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.FishFirstPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Grid Grid.Row="0" HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="211" />
+                        <RowDefinition Height="198"/>
+                        <RowDefinition Height="208"/>
+                        <RowDefinition Height="190"/>
+                        <RowDefinition Height="177"/>
+                        <RowDefinition Height="159"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="180" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0"
+                       Margin="10" HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="fishFirst.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+
+                    <Frame Grid.Row="1" 
+                       Margin="10" HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="fishSecond.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+
+                    <Frame Grid.Row="2"
+                       Margin="10" HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="fishThird.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    
+                    <Frame Grid.Row="3" 
+                       Margin="10" HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="fishFour.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    
+                    <Frame Grid.Row="4"
+                       Margin="10" HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="fishFive.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+
+                    <Frame Grid.Row="5" 
+                       Margin="10" HasShadow="True"
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="fishSix.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+
+                    <Button x:Name="FishToMainPageBtn" Grid.Row="6" Grid.Column="0" FontSize="13"
+                            Text="Готово" TextColor="White" BackgroundColor="#E57C23"
+                            CornerRadius="40" HorizontalOptions="CenterAndExpand" 
+                           Clicked="FishToMainPageBtn_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+       
+    </ContentPage.Content>
+</ContentPage>

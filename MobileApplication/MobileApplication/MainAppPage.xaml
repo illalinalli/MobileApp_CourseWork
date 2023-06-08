@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApplication.MainAppPage">
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Grid Grid.Row="1">
+                    <Button x:Name="settingsBtn" ImageSource="settings.png" Margin="0, 10, 0, 0"
+                             Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="Transparent"
+                             HeightRequest="45" WidthRequest="45" HorizontalOptions="EndAndExpand"
+                             Clicked="settingsBtn_Clicked">
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="2" Margin="0, 40, 0, 25" RowSpacing="20">
+                    <Button x:Name="MineDetailsBtn" Grid.Row="0" Grid.ColumnSpan="2"
+                    Text="Мои детали"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#025464"
+                    CornerRadius="50"
+                    Clicked="MineDetailsButton_Clicked"/>
+                    <Button x:Name="FavoritesBtn" Grid.Row="1" Grid.ColumnSpan="2"
+                    Text="Избранное"
+                    TextColor="#025464"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    BorderColor="#025464"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Clicked="FavoritesBtn_Clicked">
+                    </Button>
+                </Grid>
+                        
+                <Label Text="Схемы"
+                   TextColor="Black"
+                   FontSize="24"
+                   Margin="18"
+                   FontAttributes="Bold"
+                   />
+                <Grid Grid.Row="3" RowSpacing="5" ColumnSpacing="7" Grid.ColumnSpan="2" Grid.RowSpan="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="35"/>
+
+
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="35"/>
+
+
+                        <RowDefinition Height="135" />
+                        <RowDefinition Height="35"/>
+
+                        <RowDefinition Height="140" />
+                        <RowDefinition Height="35"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="170" />
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Row="0" Grid.Column="0"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="fish.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="0" Grid.Column="0"
+                        x:Name="ShowFishSchemeBtn"
+                        Clicked="ShowFishSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+
+                    <Label x:Name="Рыбка" Grid.Row="1" Grid.Column="0"
+                           Text="Рыбка" TextColor="Black" Margin="15, 0, 0, 0"
+                           FontSize="16" FontAttributes="Bold" />
+
+                    <Button x:Name="favFishNotSelected" ImageSource="favNoneSel.png"
+                              Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24" Margin="95, 0, 0, 0"
+                             Clicked="favFishNotSelected_Clicked">
+                    </Button>
+
+                    <Frame Grid.Row="0" Grid.Column="1"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="romb.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="0" Grid.Column="1"
+                        x:Name="ShowRombSchemeBtn"
+                        Clicked="ShowRombSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+                    <Label  x:Name="Ромб" Grid.Row="1" Grid.Column="1" 
+                        Text="Ромб" TextColor="Black" Margin="15, 0, 0, 0"
+                        FontSize="16" FontAttributes="Bold" />
+                    <Button x:Name="favRombNotSelected" ImageSource="favNoneSel.png"
+                              Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24" Margin="95, 0, 0, 0"
+                             Clicked="favRombNotSelected_Clicked">
+                    </Button>
+
+
+                    <Frame Grid.Row="2" Grid.Column="0"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="ylitka.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="2" Grid.Column="0"
+                        x:Name="ShowYlitkaSchemeBtn"
+                        Clicked="ShowYlitkaSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+                    <Label  x:Name="Улитка" Grid.Row="3" Grid.Column="0" 
+                        Text="Улитка" TextColor="Black" Margin="15, 0, 0, 0"
+                        FontSize="16" FontAttributes="Bold" />
+                    <Button x:Name="favYlitkaNotSelected" ImageSource="favNoneSel.png" Margin="100, 0, 0, 0"
+                             Grid.Row="3" Grid.Column="0" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24"
+                             Clicked="favYlitkaNotSelected_Clicked">
+                    </Button>
+
+
+                    <Frame Grid.Row="2" Grid.Column="1"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="chasi.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="2" Grid.Column="1"
+                        x:Name="ShowChasiSchemeBtn"
+                        Clicked="ShowChasiSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+                    <Label  x:Name="Часы" Grid.Row="3" Grid.Column="1" 
+                        Text="Часы" TextColor="Black" Margin="20, 0, 0, 0"
+                        FontSize="16" FontAttributes="Bold" />
+                    <Button x:Name="favChasiNotSelected" ImageSource="favNoneSel.png" Margin="100, 0, 0, 0"
+                             Grid.Row="3" Grid.Column="1" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24"
+                             Clicked="favChasiNotSelected_Clicked">
+                    </Button>
+
+
+                    <Frame Grid.Row="4" Grid.Column="0"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="osminog.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="4" Grid.Column="0"
+                        x:Name="ShowOsminogSchemeBtn"
+                        Clicked="ShowOsminogSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+                    <Label  x:Name="Осьминог" Grid.Row="5" Grid.Column="0" 
+                        Text="Осьминог" TextColor="Black" Margin="20, 0, 0, 0"
+                        FontSize="16" FontAttributes="Bold" />
+                    <Button x:Name="favOsminogNotSelected" ImageSource="favNoneSel.png" Margin="100, 0, 0, 0"
+                             Grid.Row="5" Grid.Column="0" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24"
+                             Clicked="favOsminogNotSelected_Clicked">
+                    </Button>
+
+
+                    <Frame Grid.Row="4" Grid.Column="1"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="raketa.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="4" Grid.Column="1"
+                        x:Name="ShowRaketaSchemeBtn"
+                        Clicked="ShowRaketaSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+                    <Label  x:Name="Ракета" Grid.Row="5" Grid.Column="1" 
+                        Text="Ракета" TextColor="Black" Margin="20, 0, 0, 0"
+                        FontSize="16" FontAttributes="Bold" />
+                    <Button x:Name="favRaketaNotSelected" ImageSource="favNoneSel.png" Margin="100, 0, 0, 0"
+                             Grid.Row="5" Grid.Column="1" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24"
+                             Clicked="favRaketaNotSelected_Clicked">
+                    </Button>
+
+
+                    <Frame Grid.Row="6" Grid.Column="0"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="house.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="6" Grid.Column="0"
+                        x:Name="ShowHouseSchemeBtn"
+                        Clicked="ShowHouseSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+                    <Label  x:Name="Дом" Grid.Row="7" Grid.Column="0" 
+                        Text="Дом" TextColor="Black" Margin="20, 0, 0, 0"
+                        FontSize="16" FontAttributes="Bold" />
+                    <Button x:Name="favHouseNotSelected" ImageSource="favNoneSel.png" Margin="100, 0, 0, 0"
+                             Grid.Row="7" Grid.Column="0" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24"
+                             Clicked="favHouseNotSelected_Clicked">
+                    </Button>
+
+
+                    <Frame Grid.Row="6" Grid.Column="1"
+                        HasShadow="True" 
+                       BackgroundColor="White" HorizontalOptions="CenterAndExpand"
+                       CornerRadius="30">
+                        <Image Source="robot.png" Aspect="AspectFill">
+                        </Image>
+                    </Frame>
+                    <Button Grid.Row="6" Grid.Column="1"
+                        x:Name="ShowRobotSchemeBtn"
+                        Clicked="ShowRobotSchemeBtn_Clicked" Opacity="0">
+                    </Button>
+                    <Label  x:Name="Робот" Grid.Row="7" Grid.Column="1" 
+                        Text="Робот" TextColor="Black" Margin="20, 0, 0, 0"
+                        FontSize="16" FontAttributes="Bold" />
+                    <Button x:Name="favRobotNotSelected" ImageSource="favNoneSel.png" Margin="100, 0, 0, 0"
+                             Grid.Row="7" Grid.Column="1" BackgroundColor="Transparent"
+                             HeightRequest="24" WidthRequest="24"
+                             Clicked="favRobotNotSelected_Clicked">
+                    </Button>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
