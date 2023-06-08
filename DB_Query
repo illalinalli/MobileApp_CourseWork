@@ -1,0 +1,82 @@
+CREATE DATABASE CourseWork
+GO
+
+USE CourseWork
+GO
+
+--пользователи
+CREATE TABLE Users(
+  ID int IDENTITY(1,1) NOT NULL CONSTRAINT PK_Users PRIMARY KEY, 
+  Username varchar(50),
+  Login_ varchar(20),
+  Password_ varchar(20)
+)
+
+--детали у пользователя
+CREATE TABLE UserDetails(
+  ID int IDENTITY(1,1) NOT NULL CONSTRAINT PK_UserDetails PRIMARY KEY,
+  UserId int,
+  SquareCount int,
+  EqualTriangleCount int,
+  ParallelogramCount int,
+  TrapeziumCount int,
+  RentagonCount int,
+  IsoscelesTriangleCount int,
+  HexagonCount int,
+  DoubleSquareCount int,
+  CONSTRAINT FK_UserDetails_UserId FOREIGN KEY(UserId) REFERENCES Users(ID)
+)
+
+--справочник фигур, хранящий инф-ю о каждой
+CREATE TABLE FigureCatalog(
+  ID int IDENTITY(1,1) NOT NULL CONSTRAINT PK_FigureCatalog PRIMARY KEY,
+  Name varchar(30),
+  SquareCount int,
+  EqualTriangleCount int,
+  ParallelogramCount int,
+  TrapeziumCount int,
+  RentagonCount int,
+  IsoscelesTriangleCount int,
+  HexagonCount int,
+  DoubleSquareCount int
+)
+
+--избранные фигуры
+CREATE TABLE Favorites(
+  ID int IDENTITY(1,1) NOT NULL CONSTRAINT PK_Favorites PRIMARY KEY,
+  UserId int,
+  FigureId int,
+  CONSTRAINT FK_Favorites_UserId FOREIGN KEY(UserId) REFERENCES Users(ID),
+  CONSTRAINT FK_Favorites_FigureId FOREIGN KEY(FigureId) REFERENCES FigureCatalog(ID)
+)
+
+INSERT INTO Users
+   ([Username], [Login_], [Password_])
+VALUES
+    ('Анастасия Ершова', 'anast', 'anast'),
+	('Администратор: Алина', 'admin', 'admin')
+GO
+
+INSERT INTO UserDetails
+   ([UserId], [SquareCount],[EqualTriangleCount],[ParallelogramCount],
+   [TrapeziumCount],[RentagonCount],[IsoscelesTriangleCount],[HexagonCount],[DoubleSquareCount])
+VALUES
+    (1, 7, 6, 7, 5, 0, 2, 0, 3),
+	(2, 15, 15, 15, 15, 15, 15, 15, 15)
+GO
+
+INSERT INTO FigureCatalog
+   ([Name], [SquareCount],[EqualTriangleCount],[ParallelogramCount],
+   [TrapeziumCount],[RentagonCount],[IsoscelesTriangleCount],[HexagonCount],[DoubleSquareCount])
+VALUES
+    ('Рыбка', 6, 6, 0, 0, 0, 0, 0, 0),
+	('Ромб', 6, 8, 0, 0, 0, 0, 0, 0)
+GO
+
+INSERT INTO Favorites
+   ([UserId], [FigureId])
+VALUES
+    (1, 1),
+	(1, 2),
+	(2, 1)
+GO
